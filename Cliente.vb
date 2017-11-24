@@ -21,7 +21,7 @@ Public Class Cliente
 #Region "EVENTOS"
     Public Event ConexionTerminada()
     Public Event DatosRecibidos(ByVal datos As String, ByVal sonido As Byte())
-    Public Event RespuestaLogin(ByVal respuesta As String)
+    Public Event RespuestaLogin(ByVal respuesta As Solicitud)
     Public Event RespuestaMensaje(ByVal respuesta As String)
     Public Event RespuestaUsers(ByVal respuesta As ArrayList)
     Public Event RespuestaObtener(ByVal respuesta As ArrayList)
@@ -131,7 +131,7 @@ Public Class Cliente
                 Dim solicitud As Solicitud = funciones.DesSerializar(x, 1)
                 Select Case solicitud.TipoSolicitud
                     Case 1
-                        RaiseEvent RespuestaLogin(solicitud.MensajeSolicitud)
+                        RaiseEvent RespuestaLogin(solicitud)
                     Case 2
                         Try
                             Dim mens As String = funciones.decryptString(solicitud.MensajeSolicitud)

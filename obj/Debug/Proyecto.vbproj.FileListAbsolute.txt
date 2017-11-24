@@ -18,7 +18,6 @@ C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\bin\Debug\Proyec
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\bin\Debug\Proyecto.xml
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Bitacora.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Chat.resources
-C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Form1.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Login.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Resources.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NewUser.resources
@@ -27,3 +26,6 @@ C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyec
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.exe
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.xml
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.pdb
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoVotante.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoCandidato.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Inscripcion.resources

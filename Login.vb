@@ -12,6 +12,7 @@ Public Class Login
     Private demo As Threading.Thread = Nothing
     Private ip As String = GetIPAddress()
     Private puerto As String = "8050"
+    Private user As ArrayList
 
     Private Sub ThreadProcSafe()
         Me.SetText("")
@@ -22,8 +23,15 @@ Public Class Login
             Dim d As New SetTextCallback(AddressOf SetText)
             Me.Invoke(d, New Object() {[text1]})
         Else
-            Dim Principal As New VenCliente
-            Principal.Inicio(New User(txtUsuario.Text), WinSockCliente, Me)
+            Debug.WriteLine("User: " + user.Item(0).ToString() + ", " + user.Item(1).ToString() + ", " + user.Item(2).ToString())
+            Dim tipo As Integer = user.Item(2)
+            Dim Principal
+            If (tipo = 2) Then
+                Principal = New VenCliente
+            Else
+                Principal = New Inscripcion
+            End If
+            'Principal.Inicio(New User(txtUsuario.Text), WinSockCliente, Me)
             Principal.Show()
             Me.Hide()
         End If
@@ -43,13 +51,6 @@ Public Class Login
         Else
             Me.txtPassword.Text = text1
         End If
-    End Sub
-
-    Private Sub cmdNew_Click(sender As Object, e As EventArgs)
-        Dim nuevo As NewUser = New NewUser
-        nuevo.Show()
-        nuevo.Inicio(WinSockCliente)
-        Me.Hide()
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -85,8 +86,9 @@ Public Class Login
         End Try
     End Sub
 
-    Private Sub RespuestaLogin(ByVal mensaje As String) Handles WinSockCliente.RespuestaLogin
-        If mensaje.Equals("Exito al hacer login") Then
+    Private Sub RespuestaLogin(ByVal mensaje As Solicitud) Handles WinSockCliente.RespuestaLogin
+        If mensaje.MensajeSolicitud.Equals("Exito al hacer login") Then
+            Me.user = mensaje.ArgumentosSolicitud
             func.Bitacora("Éxito al hacer login de " & txtUsuario.Text, txtUsuario.Text)
             Me.demo = New Threading.Thread(New Threading.ThreadStart(AddressOf Me.ThreadProcSafe))
             Me.demo.Start()
