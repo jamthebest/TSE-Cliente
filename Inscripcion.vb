@@ -1,21 +1,38 @@
 ﻿Public Class Inscripcion
 
+    Private log As Login
+    Private user As User
+    Dim WithEvents WinSockCliente As New Cliente
+
+    Public Sub Inicio(ByVal user As User, ByVal socket As Cliente, ByVal login As Login)
+        Me.user = user
+        WinSockCliente = socket
+        Me.log = login
+    End Sub
+
     Private Sub AbrirInscripcion(tipo As String)
         Dim nuevo As NuevoCandidato = New NuevoCandidato
+        nuevo.MdiParent = Me
         nuevo.Show()
         nuevo.Inicio(tipo)
-        Me.Hide()
     End Sub
 
-    Private Sub btnPresidencial_Click(sender As Object, e As EventArgs) Handles btnPresidencial.Click
-        AbrirInscripcion("Presidencial")
+    Private Sub menuPresidente_Click(sender As Object, e As EventArgs) Handles menuPresidente.Click
+        Me.AbrirInscripcion("Presidencial")
     End Sub
 
-    Private Sub btnAlcaldia_Click(sender As Object, e As EventArgs) Handles btnAlcaldia.Click
-        AbrirInscripcion("a la Alcaldía")
+    Private Sub menuAlcalde_Click(sender As Object, e As EventArgs) Handles menuAlcalde.Click
+        Me.AbrirInscripcion("a la Alcaldía")
     End Sub
 
-    Private Sub btnDiputacion_Click(sender As Object, e As EventArgs) Handles btnDiputacion.Click
-        AbrirInscripcion("a Diputación")
+    Private Sub menuDiputado_Click(sender As Object, e As EventArgs) Handles menuDiputado.Click
+        Me.AbrirInscripcion("a Diputación")
+    End Sub
+
+    Private Sub menuPais_Click(sender As Object, e As EventArgs) Handles menuPais.Click
+        Dim nuevo As New NuevoPais
+        nuevo.MdiParent = Me
+        nuevo.Show()
+        nuevo.Inicio(Me.user, Me.WinSockCliente)
     End Sub
 End Class

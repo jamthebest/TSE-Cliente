@@ -133,6 +133,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property business_application_addmale_useradd_insert_add_user_client_2312() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("business_application_addmale_useradd_insert_add_user_client_2312", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property button_pause_red() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("button_pause_red", resourceCulture)
@@ -166,6 +176,16 @@ Namespace My.Resources
         Friend ReadOnly Property chat() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("chat", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property globe_world_download_2324() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("globe_world_download_2324", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

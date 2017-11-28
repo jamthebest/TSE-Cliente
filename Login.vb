@@ -27,11 +27,11 @@ Public Class Login
             Dim tipo As Integer = user.Item(2)
             Dim Principal
             If (tipo = 2) Then
-                Principal = New VenCliente
+                Principal = New NuevoVotante
             Else
                 Principal = New Inscripcion
             End If
-            'Principal.Inicio(New User(txtUsuario.Text), WinSockCliente, Me)
+            Principal.Inicio(New User(txtUsuario.Text, user), WinSockCliente, Me)
             Principal.Show()
             Me.Hide()
         End If

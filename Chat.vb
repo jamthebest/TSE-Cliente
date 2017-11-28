@@ -98,21 +98,21 @@ Public Class Chat
         If texto.Equals("") And Label2.Text = "" Then
             MsgBox("No Escribió Nada en el Mensaje", MsgBoxStyle.Critical, "Error al Enviar")
         Else
-            Dim mensaje As Mensaje 'Se crea la variable para el mensaje nuevo
+            'Dim mensaje As Mensaje 'Se crea la variable para el mensaje nuevo
             If texto.Equals("") Then 'Se envía un mensaje de audio
                 funciones.Bitacora("El Usuario " & yo.User & " envió un mensaje de audio a " & dest.User, yo.user)
                 Dim audio As Byte() = funciones.FileToByteArray(yo.User & dest.User & "_" & contador & ".mp3") 'Se convierte el audio a un arreglo de bytes
-                mensaje = New Mensaje("", audio, dest, yo) 'Se crea el mensaje de Solo de sonido
+                'mensaje = New Mensaje("", audio, dest, yo) 'Se crea el mensaje de Solo de sonido
             ElseIf Label2.Text.Equals("") Then 'Se envía un mensaje de texto
                 funciones.Bitacora("El Usuario " & yo.User & " envió un mensaje de texto a " & dest.User, yo.user)
-                mensaje = New Mensaje(texto, dest, yo) 'Se crea el mensaje de Solo de texto
+                'mensaje = New Mensaje(texto, dest, yo) 'Se crea el mensaje de Solo de texto
             Else 'Se envia un mensaje de Audio y Texto
                 funciones.Bitacora("El Usuario " & yo.User & " envió un mensaje de audio y texto a " & dest.User, yo.user)
                 Dim audio As Byte() = funciones.FileToByteArray(yo.User & dest.User & "_" & contador & ".mp3") 'Se convierte el audio
-                mensaje = New Mensaje(texto, audio, dest, yo) 'Se crea el mensaje de De texto y audio
+                'mensaje = New Mensaje(texto, audio, dest, yo) 'Se crea el mensaje de De texto y audio
             End If
             contador += 1
-            txtXML = funciones.Serializar(mensaje, yo.User) 'funcion que convierte el mensaje a XML
+            'txtXML = funciones.Serializar(mensaje, yo.User) 'funcion que convierte el mensaje a XML
             Dim md As String = funciones.MD5Encrypt(txtXML) 'Se encripta el XML en MD5
             tDes = funciones.encryptString(txtXML & "?XXXJAMXXX?" & md) 'Se encripta el MD5 con el XML en 3DES
 
@@ -401,9 +401,9 @@ Public Class Chat
                 Else
                     origen = dest.User
                 End If
-                Dim message As Mensaje
+                'Dim message As Mensaje
                 My.Computer.FileSystem.WriteAllText(yo.User & ".xml", respuesta((i * 4) + 2).ToString, False)
-                message = funciones.DesSerializar(yo.User & ".xml")
+                'message = funciones.DesSerializar(yo.User & ".xml")
                 'message = funciones.DesSerializar(funciones.FileToString(yo.User & ".xml"))
                 'Dim fecha As String = DateTime.Now.ToString("dd-MM-yyyy")
                 'MsgBox((respuesta((i * 4) + 3).ToString).Substring(0, 10))
@@ -418,12 +418,12 @@ Public Class Chat
                     End If
                     contador += 1
                 End If
-                If Not IsNothing(message.Sound) Then
-                    funciones.BytesToFile(message.Sound, yo.User & dest.User, i + 1) 'System.Text.Encoding.Default.GetBytes(message.Sound), yo.User, contador)
-                    Me.SetText2(origen & ": " & message.Text & " %% Audio.mp3 %%" & "   (" & (respuesta((i * 4) + 3).ToString).Substring(12) & ")")
-                Else
-                    Me.SetText2(origen & ": " & message.Text & "   (" & (respuesta((i * 4) + 3).ToString).Substring(12) & ")")
-                End If
+                'If Not IsNothing(message.Sound) Then
+                'funciones.BytesToFile(Message.Sound, yo.User & dest.User, i + 1) 'System.Text.Encoding.Default.GetBytes(message.Sound), yo.User, contador)
+                'Me.SetText2(origen & ": " & Message.Text & " %% Audio.mp3 %%" & "   (" & (respuesta((i * 4) + 3).ToString).Substring(12) & ")")
+                'Else
+                'Me.SetText2(origen & ": " & Message.Text & "   (" & (respuesta((i * 4) + 3).ToString).Substring(12) & ")")
+                'End If
                 If (IO.File.Exists(yo.User & ".xml")) Then
                     IO.File.Delete(yo.User & ".xml")
                 End If

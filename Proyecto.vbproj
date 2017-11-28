@@ -90,6 +90,18 @@
     </Compile>
     <Compile Include="Cliente.vb" />
     <Compile Include="Datos.vb" />
+    <Compile Include="NuevoPais.Designer.vb">
+      <DependentUpon>NuevoPais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoPais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripcion.Designer.vb">
+      <DependentUpon>Inscripcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoVotante.Designer.vb">
       <DependentUpon>NuevoVotante.vb</DependentUpon>
     </Compile>
@@ -102,12 +114,6 @@
     <Compile Include="NuevoCandidato.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inscripcion.Designer.vb">
-      <DependentUpon>Inscripcion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Inscripcion.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -115,7 +121,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Funciones.vb" />
-    <Compile Include="Mensaje.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -131,12 +136,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="NewUser.Designer.vb">
-      <DependentUpon>NewUser.vb</DependentUpon>
-    </Compile>
-    <Compile Include="NewUser.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Registro.vb" />
     <Compile Include="Solicitud.vb" />
     <Compile Include="User.vb" />
     <Compile Include="VenCliente.Designer.vb">
@@ -153,14 +153,17 @@
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NuevoPais.resx">
+      <DependentUpon>NuevoPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripcion.resx">
+      <DependentUpon>Inscripcion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NuevoVotante.resx">
       <DependentUpon>NuevoVotante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoCandidato.resx">
       <DependentUpon>NuevoCandidato.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inscripcion.resx">
-      <DependentUpon>Inscripcion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -170,9 +173,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewUser.resx">
-      <DependentUpon>NewUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VenCliente.resx">
       <DependentUpon>VenCliente.vb</DependentUpon>
@@ -226,6 +226,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dialog-20.ico" />
+    <None Include="Resources\globe_world_download_2324.png" />
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
     <None Include="Resources\TSE.png" />
     <None Include="Resources\Apps-preferences-desktop-user-password-icon.png" />
     <None Include="Resources\App-login-manager-icon.png" />

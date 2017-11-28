@@ -11,7 +11,7 @@ Public Class Funciones
     Private solicitud As Solicitud
     
 
-    Function Serializar(ByVal objeto As Mensaje, ByVal ruta As String) As String
+    Function Serializar(ByVal objeto As String, ByVal ruta As String) As String
         SyncLock Me
             If (IO.File.Exists(ruta & ".xml")) Then
                 IO.File.Delete(ruta & ".xml")
@@ -20,6 +20,25 @@ Public Class Funciones
             Dim x As New XmlSerializer(objeto.GetType)
             Try
                 x.Serialize(objStreamWriter, objeto)
+            Catch ex As NotImplementedException
+                MsgBox("Error al Serializar: " & ex.ToString, MsgBoxStyle.Critical, "Error!")
+            Finally
+                objStreamWriter.Close()
+            End Try
+            Return FileToString(ruta & ".xml")
+        End SyncLock
+    End Function
+
+
+    Function Serializar(ByVal registro As Registro, ByVal ruta As String) As String
+        SyncLock Me
+            If (IO.File.Exists(ruta & ".xml")) Then
+                IO.File.Delete(ruta & ".xml")
+            End If
+            Dim objStreamWriter As New StreamWriter(ruta & ".xml")
+            Dim x As New XmlSerializer(registro.GetType)
+            Try
+                x.Serialize(objStreamWriter, registro)
             Catch ex As NotImplementedException
                 MsgBox("Error al Serializar: " & ex.ToString, MsgBoxStyle.Critical, "Error!")
             Finally
@@ -51,9 +70,9 @@ Public Class Funciones
         End SyncLock
     End Function
 
-    Public Function DesSerializar(ByVal xml As String) As Mensaje
+    Public Function DesSerializar(ByVal xml As String) As String
         SyncLock Me
-            Dim mensaje As New Mensaje()
+            Dim mensaje As String
             Dim x As New XmlSerializer(mensaje.GetType)
             'Deserialize text file to a new object.
             Dim objStreamReader As New StreamReader(xml)
@@ -315,6 +334,22 @@ Public Class Funciones
             MsgBox("Error al enviar solicitud de login!" & vbCrLf & ex.Message)
         End Try
     End Sub
+
+    Public Function nuevoRegistro(ByVal Data As Registro, ByVal Socket As Cliente)
+        Try
+            Dim xml As String = Serializar(Data, "Registro")
+            Dim md As String = MD5Encrypt(xml) 'Se encripta el XML en MD5
+            Dim tDes As String = encryptString(xml & "?XXXJAMXXX?" & md) 'Se encripta el MD5 con el XML en 3DES
+
+            solicitud = New Solicitud(2, tDes)
+            Dim encriptado As String = Encriptar(solicitud, "Solicitud")
+            Socket.EnviarDatos(encriptado) 'Se envía el mensaje al servidor
+        Catch ex As Exception
+            MsgBox("Error al crear nuevo cliente!" & vbCrLf & ex.Message)
+            Return False
+        End Try
+        Return True
+    End Function
 
     Public Function nuevoCliente(ByVal Data As Datos, ByVal Socket As Cliente)
         Try

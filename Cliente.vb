@@ -22,6 +22,7 @@ Public Class Cliente
     Public Event ConexionTerminada()
     Public Event DatosRecibidos(ByVal datos As String, ByVal sonido As Byte())
     Public Event RespuestaLogin(ByVal respuesta As Solicitud)
+    Public Event RespuestaCrearRegistro(ByVal respuesta As Solicitud)
     Public Event RespuestaMensaje(ByVal respuesta As String)
     Public Event RespuestaUsers(ByVal respuesta As ArrayList)
     Public Event RespuestaObtener(ByVal respuesta As ArrayList)
@@ -133,25 +134,7 @@ Public Class Cliente
                     Case 1
                         RaiseEvent RespuestaLogin(solicitud)
                     Case 2
-                        Try
-                            Dim mens As String = funciones.decryptString(solicitud.MensajeSolicitud)
-                            mens = mens.Substring(0, mens.IndexOf("?XXXJAMXXX?"))
-                            Dim mensaje As Mensaje = funciones.DesSerializar(funciones.xmlToFile(mens, "Mensaje"))
-                            mens = mensaje.Text
-                            If mens.Equals("") Then
-                                mens = "%% Audio.mp3 %%"
-                            ElseIf Not IsNothing(mensaje.Sound) Then
-                                mens &= "  %% Audio.mp3 %%"
-                            End If
-                            mens &= "   _" & DateTime.Now.ToString("dd/MM/yyyy  hh:mm:ss")
-
-                            If Not cliente.isOpen(mensaje.MessageFrom.User) Then
-                                cliente.abrirChat(mensaje.MessageFrom.User)
-                            End If
-                            RaiseEvent DatosRecibidos(mens, mensaje.Sound)
-                        Catch e As Exception
-                            MsgBox("Error al Recibir Mensaje: " & e.Message)
-                        End Try
+                        RaiseEvent RespuestaCrearRegistro(solicitud)
                     Case 3
                         RaiseEvent RespuestaUsers(solicitud.ArgumentosSolicitud)
                     Case 4
@@ -163,6 +146,7 @@ Public Class Cliente
                 End Select
 
             Catch e As Exception
+                Debug.WriteLine("Error: " + e.Message)
                 Exit While
             End Try
         End While

@@ -61,7 +61,7 @@ Public Class VenCliente
                 Dim chat As Chat = New Chat
                 ventanas.Add(chat)
                 clientes.Add(seleccionado)
-                chat.User(New User(yo.User), New User(seleccionado), WinSockCliente, Me)
+                'chat.User(New User(yo.User), New User(seleccionado), WinSockCliente, Me)
                 chat.Show()
             End If
         End If
@@ -184,7 +184,7 @@ Public Class VenCliente
             Dim chat As Chat = New Chat
             ventanas.Add(chat)
             clientes.Add(text1)
-            chat.User(New User(yo.User), New User(text1), WinSockCliente, Me)
+            'chat.User(New User(yo.User), New User(text1), WinSockCliente, Me)
             chat.Show()
         End If
     End Sub
@@ -220,7 +220,7 @@ Public Class VenCliente
             Dim chat As Chat = New Chat
             ventanas.Add(chat)
             clientes.Add(seleccionado)
-            chat.User(New User(yo.User), New User(seleccionado), WinSockCliente, Me)
+            'chat.User(New User(yo.User), New User(seleccionado), WinSockCliente, Me)
             chat.Show()
         End If
     End Sub
