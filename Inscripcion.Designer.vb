@@ -105,19 +105,19 @@ Partial Class Inscripcion
         'menuPais
         '
         Me.menuPais.Name = "menuPais"
-        Me.menuPais.Size = New System.Drawing.Size(152, 22)
+        Me.menuPais.Size = New System.Drawing.Size(150, 22)
         Me.menuPais.Text = "Pais"
         '
         'menuDepartamento
         '
         Me.menuDepartamento.Name = "menuDepartamento"
-        Me.menuDepartamento.Size = New System.Drawing.Size(152, 22)
+        Me.menuDepartamento.Size = New System.Drawing.Size(150, 22)
         Me.menuDepartamento.Text = "Departamento"
         '
         'menuMunicipio
         '
         Me.menuMunicipio.Name = "menuMunicipio"
-        Me.menuMunicipio.Size = New System.Drawing.Size(152, 22)
+        Me.menuMunicipio.Size = New System.Drawing.Size(150, 22)
         Me.menuMunicipio.Text = "Municipio"
         '
         'PictureBox5

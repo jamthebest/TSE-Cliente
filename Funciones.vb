@@ -163,25 +163,22 @@ Public Class Funciones
         'Return Convert.FromBase64String(System.IO.File.ReadAllBytes(_FileName))
     End Function
 
-    Public Function BytesToFile(ByVal bytDataArray As Byte(), ByVal nombre As String, ByVal numero As Integer) As Boolean
+    Public Function BytesToFile(ByVal bytDataArray As Byte(), ByVal nombre As String) As Boolean
         Try
-            If (IO.File.Exists(nombre & "_" & numero & ".mp3")) Then
-                IO.File.Delete(nombre & "_" & numero & ".mp3")
+            If (IO.File.Exists(nombre)) Then
+                IO.File.Delete(nombre)
             End If
             Dim length As Integer = bytDataArray.Length
-            Dim tempFileName As String = nombre & "_" & numero & ".mp3"
+            Dim tempFileName As String = nombre
             Using fs As New IO.FileStream(tempFileName, IO.FileMode.OpenOrCreate)
                 Dim bw As New IO.BinaryWriter(fs)
                 bw.Write(bytDataArray, 0, length)
                 bw.Flush()
                 bw = Nothing
             End Using
-
-            'IO.File.WriteAllBytes(nombre & numero & ".mp3", bytDataArray)
-            'My.Computer.FileSystem.WriteAllText(nombre & numero & ".mp3", bytDataArray.ToString, False)
             Return True
         Catch ex As Exception
-            MsgBox("Error al crear archivo de audio!" & vbCrLf & ex.Message)
+            MsgBox("Error al obtener archivo!" & vbCrLf & ex.Message)
         End Try
         Return False
     End Function
@@ -366,7 +363,7 @@ Public Class Funciones
             Dim encriptado As String = Encriptar(solicitud, "Solicitud")
             Socket.EnviarDatos(encriptado) 'Se envía el mensaje al servidor
         Catch ex As Exception
-            MsgBox("Error al crear nuevo cliente!" & vbCrLf & ex.Message)
+            MsgBox("Error al crear nuevo registro!" & vbCrLf & ex.Message)
             Return False
         End Try
         Return True

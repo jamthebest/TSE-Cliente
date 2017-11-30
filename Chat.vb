@@ -46,9 +46,9 @@ Public Class Chat
     Private Sub WinSockCliente_DatosRecibidos(ByVal datos As String, ByVal sonido As Byte()) Handles WinSockCliente.DatosRecibidos
         'txtMensaje.Text = txtMensaje.Text + datos
         Texto = datos
-        If Not IsNothing(sonido) Then
-            funciones.BytesToFile(sonido, yo.User & dest.User, contador)
-        End If
+        'If Not IsNothing(sonido) Then
+        'funciones.BytesToFile(sonido, yo.User & dest.User, contador)
+        'End If
         contador += 1
         Me.demo = New Threading.Thread(New Threading.ThreadStart(AddressOf Me.ThreadProcSafe))
         Me.demo.Start()
