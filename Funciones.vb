@@ -322,11 +322,19 @@ Public Class Funciones
         End Try
     End Sub
 
-    Public Sub obtenerRegistros(ByVal tabla As String, ByVal Usuario As User, ByVal Socket As Cliente)
+    Public Sub obtenerRegistros(ByVal tabla As String, ByVal Usuario As User, ByVal Socket As Cliente, Optional ByVal parametros As ArrayList = Nothing)
         Try
+            If parametros Is Nothing Then
+                parametros = New ArrayList
+            End If
             Dim params As ArrayList = New ArrayList()
             params.Add(Usuario.User)
             params.Add(Usuario.idUser)
+            If parametros.Count > 0 Then
+                For Each par As Object In parametros
+                    params.Add(par)
+                Next
+            End If
             solicitud = New Solicitud(4, params, tabla)
             Dim encriptado As String = Encriptar(solicitud, "Solicitud")
             Socket.EnviarDatos(encriptado)

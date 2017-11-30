@@ -96,6 +96,12 @@
     <Compile Include="NuevoDepartamento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NuevoMunicipio.Designer.vb">
+      <DependentUpon>NuevoMunicipio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoMunicipio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoPais.Designer.vb">
       <DependentUpon>NuevoPais.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoDepartamento.resx">
       <DependentUpon>NuevoDepartamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoMunicipio.resx">
+      <DependentUpon>NuevoMunicipio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoPais.resx">
       <DependentUpon>NuevoPais.vb</DependentUpon>

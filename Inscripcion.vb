@@ -42,4 +42,11 @@
         nuevo.MdiParent = Me
         nuevo.Show()
     End Sub
+
+    Private Sub menuMunicipio_Click(sender As Object, e As EventArgs) Handles menuMunicipio.Click
+        Dim nuevo As New NuevoMunicipio
+        nuevo.Inicio(Me.user, Me.WinSockCliente)
+        nuevo.MdiParent = Me
+        nuevo.Show()
+    End Sub
 End Class
