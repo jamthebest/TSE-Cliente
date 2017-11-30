@@ -1,5 +1,4 @@
 ﻿Public Class NuevoPais
-
     Private user As User
     Private demo As Threading.Thread = Nothing
     Dim funciones As New Funciones

@@ -72,7 +72,7 @@ Public Class Funciones
 
     Public Function DesSerializar(ByVal xml As String) As String
         SyncLock Me
-            Dim mensaje As String
+            Dim mensaje As String = ""
             Dim x As New XmlSerializer(mensaje.GetType)
             'Deserialize text file to a new object.
             Dim objStreamReader As New StreamReader(xml)
@@ -319,6 +319,19 @@ Public Class Funciones
             Socket.EnviarDatos(encriptado)
         Catch ex As Exception
             MsgBox("Error al enviar solicitud para obtener los usuarios!" & vbCrLf & ex.Message)
+        End Try
+    End Sub
+
+    Public Sub obtenerRegistros(ByVal tabla As String, ByVal Usuario As User, ByVal Socket As Cliente)
+        Try
+            Dim params As ArrayList = New ArrayList()
+            params.Add(Usuario.User)
+            params.Add(Usuario.idUser)
+            solicitud = New Solicitud(4, params, tabla)
+            Dim encriptado As String = Encriptar(solicitud, "Solicitud")
+            Socket.EnviarDatos(encriptado)
+        Catch ex As Exception
+            MsgBox("Error al enviar solicitud para obtener los Registros!" & vbCrLf & ex.Message)
         End Try
     End Sub
 

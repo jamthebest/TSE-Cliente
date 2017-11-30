@@ -112,7 +112,7 @@ Public Class Chat
                 'mensaje = New Mensaje(texto, audio, dest, yo) 'Se crea el mensaje de De texto y audio
             End If
             contador += 1
-            'txtXML = funciones.Serializar(mensaje, yo.User) 'funcion que convierte el mensaje a XML
+            txtXML = funciones.Serializar(New Registro(), yo.User) 'funcion que convierte el mensaje a XML
             Dim md As String = funciones.MD5Encrypt(txtXML) 'Se encripta el XML en MD5
             tDes = funciones.encryptString(txtXML & "?XXXJAMXXX?" & md) 'Se encripta el MD5 con el XML en 3DES
 

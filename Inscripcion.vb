@@ -31,8 +31,15 @@
 
     Private Sub menuPais_Click(sender As Object, e As EventArgs) Handles menuPais.Click
         Dim nuevo As New NuevoPais
+        nuevo.Inicio(Me.user, Me.WinSockCliente)
         nuevo.MdiParent = Me
         nuevo.Show()
+    End Sub
+
+    Private Sub menuDepartamento_Click(sender As Object, e As EventArgs) Handles menuDepartamento.Click
+        Dim nuevo As New NuevoDepartamento
         nuevo.Inicio(Me.user, Me.WinSockCliente)
+        nuevo.MdiParent = Me
+        nuevo.Show()
     End Sub
 End Class

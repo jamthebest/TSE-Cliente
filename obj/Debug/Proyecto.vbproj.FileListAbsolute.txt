@@ -18,6 +18,7 @@ C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\bin\Debug\Proyec
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\bin\Debug\Proyecto.xml
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Bitacora.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Chat.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoDepartamento.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoPais.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Inscripcion.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoVotante.resources
