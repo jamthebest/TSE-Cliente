@@ -41,7 +41,6 @@
             If dialog.FileName <> String.Empty Then
                 Me.imgLogo.Image = Bitmap.FromFile(dialog.FileName)
                 Me.path = dialog.FileName
-                Debug.WriteLine("New Path: " & dialog.FileName)
             End If
         End If
     End Sub
@@ -61,6 +60,5 @@
 
     Private Sub NuevoPartido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.path = Me.path.Substring(0, Me.path.Length - 28) & "Resources\App_login_manager_icon.png"
-        Debug.WriteLine("Path: " & Me.path)
     End Sub
 End Class

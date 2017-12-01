@@ -27,7 +27,7 @@ Public Class Login
             Dim tipo As Integer = user.Item(2)
             Dim Principal
             If (tipo = 2) Then
-                Principal = New NuevoVotante
+                Principal = New NuevoUsuario
             Else
                 Principal = New Inscripcion
             End If

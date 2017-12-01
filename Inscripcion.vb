@@ -56,4 +56,11 @@
         nuevo.MdiParent = Me
         nuevo.Show()
     End Sub
+
+    Private Sub menuVotante_Click(sender As Object, e As EventArgs) Handles menuVotante.Click
+        Dim nuevo As New NuevoUsuario
+        nuevo.Inicio(Me.user, Me.WinSockCliente)
+        nuevo.MdiParent = Me
+        nuevo.Show()
+    End Sub
 End Class

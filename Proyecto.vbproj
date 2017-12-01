@@ -120,10 +120,10 @@
     <Compile Include="NuevoPartido.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevoVotante.Designer.vb">
-      <DependentUpon>NuevoVotante.vb</DependentUpon>
+    <Compile Include="NuevoUsuario.Designer.vb">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="NuevoVotante.vb">
+    <Compile Include="NuevoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NuevoCandidato.Designer.vb">
@@ -186,8 +186,8 @@
     <EmbeddedResource Include="NuevoPartido.resx">
       <DependentUpon>NuevoPartido.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevoVotante.resx">
-      <DependentUpon>NuevoVotante.vb</DependentUpon>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoCandidato.resx">
       <DependentUpon>NuevoCandidato.vb</DependentUpon>
