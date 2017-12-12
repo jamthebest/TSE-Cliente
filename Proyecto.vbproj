@@ -90,6 +90,12 @@
     </Compile>
     <Compile Include="Cliente.vb" />
     <Compile Include="Datos.vb" />
+    <Compile Include="Identidad.Designer.vb">
+      <DependentUpon>Identidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Identidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoDepartamento.Designer.vb">
       <DependentUpon>NuevoDepartamento.vb</DependentUpon>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Identidad.resx">
+      <DependentUpon>Identidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoDepartamento.resx">
       <DependentUpon>NuevoDepartamento.vb</DependentUpon>

@@ -388,7 +388,7 @@ Public Class Chat
         tool.SetToolTip(Me.btnEnviar, "Enviar Mensaje")
     End Sub
 
-    Public Sub RespuestaObtener(ByVal respuesta As ArrayList) Handles WinSockCliente.RespuestaObtener
+    Public Sub RespuestaObtener(ByVal respuesta As ArrayList, ByVal tabla As String) Handles WinSockCliente.RespuestaObtener
         SyncLock Me
             Dim origen As String
             contador = 1

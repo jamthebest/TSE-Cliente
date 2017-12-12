@@ -45,7 +45,7 @@
         End If
     End Sub
 
-    Private Sub RespuestaObtenerRegistros(ByVal listado As ArrayList) Handles WinSockCliente.RespuestaObtener
+    Private Sub RespuestaObtenerRegistros(ByVal listado As ArrayList, ByVal tabla As String) Handles WinSockCliente.RespuestaObtener
         Me.items = listado
         Me.demoSelect = New Threading.Thread(New Threading.ThreadStart(AddressOf Me.ThreadProcSafeSelect))
         Me.demoSelect.Start()

@@ -11,22 +11,22 @@
     End Sub
 
     Private Sub AbrirInscripcion(tipo As String)
-        Dim nuevo As NuevoCandidato = New NuevoCandidato
+        Dim nuevo As New Identidad
         nuevo.MdiParent = Me
         nuevo.Show()
-        nuevo.Inicio(tipo)
+        nuevo.Inicio(Me.user, tipo, Me.WinSockCliente)
     End Sub
 
     Private Sub menuPresidente_Click(sender As Object, e As EventArgs) Handles menuPresidente.Click
-        Me.AbrirInscripcion("Presidencial")
+        Me.AbrirInscripcion("Presidente")
     End Sub
 
     Private Sub menuAlcalde_Click(sender As Object, e As EventArgs) Handles menuAlcalde.Click
-        Me.AbrirInscripcion("a la Alcaldía")
+        Me.AbrirInscripcion("Alcalde")
     End Sub
 
     Private Sub menuDiputado_Click(sender As Object, e As EventArgs) Handles menuDiputado.Click
-        Me.AbrirInscripcion("a Diputación")
+        Me.AbrirInscripcion("Diputado")
     End Sub
 
     Private Sub menuPais_Click(sender As Object, e As EventArgs) Handles menuPais.Click

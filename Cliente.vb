@@ -25,7 +25,7 @@ Public Class Cliente
     Public Event RespuestaCrearRegistro(ByVal respuesta As Solicitud)
     Public Event RespuestaMensaje(ByVal respuesta As String)
     Public Event RespuestaUsers(ByVal respuesta As ArrayList)
-    Public Event RespuestaObtener(ByVal respuesta As ArrayList)
+    Public Event RespuestaObtener(ByVal respuesta As ArrayList, ByVal tabla As String)
 #End Region
 
 #Region "PROPIEDADES"
@@ -138,7 +138,7 @@ Public Class Cliente
                     Case 3
                         RaiseEvent RespuestaUsers(solicitud.ArgumentosSolicitud)
                     Case 4
-                        RaiseEvent RespuestaObtener(solicitud.ArgumentosSolicitud)
+                        RaiseEvent RespuestaObtener(solicitud.ArgumentosSolicitud, solicitud.MensajeSolicitud)
                     Case 5
                         RaiseEvent RespuestaMensaje(solicitud.MensajeSolicitud)
                     Case Else
