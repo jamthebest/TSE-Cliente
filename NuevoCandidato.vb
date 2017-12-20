@@ -62,6 +62,7 @@
             Dim d As New CloseFormCallback(AddressOf CloseForm)
             Me.Invoke(d, New Object() {[text1]})
         Else
+            Me.Visible = False
             Me.Close()
         End If
     End Sub
@@ -110,6 +111,9 @@
     End Sub
 
     Private Sub RespuestaCrearRegistro(ByVal respuesta As Solicitud) Handles WinSockCliente.RespuestaCrearRegistro
+        If Not (Me.Visible) Then
+            Return
+        End If
         Debug.WriteLine("Respuesta: " + respuesta.MensajeSolicitud)
         If (respuesta.MensajeSolicitud = "Registro Creado!") Then
             MsgBox("Candidato Registrado!", MsgBoxStyle.OkOnly)
@@ -121,9 +125,7 @@
     End Sub
 
     Private Sub NuevoCandidato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If (Me.path = "") Then
-            Me.path = Me.path.Substring(0, Me.path.Length - 28) & "Resources\App_login_manager_icon.png"
-        End If
+        Me.path = Me.path.Substring(0, Me.path.Length - 28) & "Resources\App-login-manager-icon.png"
         funciones.obtenerRegistros("Partidos", Me.user, Me.WinSockCliente)
     End Sub
 

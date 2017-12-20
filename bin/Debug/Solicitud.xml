@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Solicitud xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <TipoSolicitud>1</TipoSolicitud>
+  <TipoSolicitud>4</TipoSolicitud>
+  <MensajeSolicitud>Candidatos</MensajeSolicitud>
   <ArgumentosSolicitud>
     <anyType xsi:type="xsd:string">luis</anyType>
-    <anyType xsi:type="xsd:string">81dc9bdb52d04dc20036dbd8313ed055</anyType>
+    <anyType xsi:type="xsd:string">2</anyType>
+    <anyType xsi:type="xsd:int">3</anyType>
   </ArgumentosSolicitud>
 </Solicitud>

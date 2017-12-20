@@ -59,6 +59,6 @@
     End Sub
 
     Private Sub NuevoPartido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.path = Me.path.Substring(0, Me.path.Length - 28) & "Resources\App_login_manager_icon.png"
+        Me.path = Me.path.Substring(0, Me.path.Length - 28) & "Resources\App-login-manager-icon.png"
     End Sub
 End Class

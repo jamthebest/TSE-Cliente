@@ -166,7 +166,8 @@ Public Class Funciones
     Public Function BytesToFile(ByVal bytDataArray As Byte(), ByVal nombre As String) As Boolean
         Try
             If (IO.File.Exists(nombre)) Then
-                IO.File.Delete(nombre)
+                Return True
+                'IO.File.Delete(nombre)
             End If
             Dim length As Integer = bytDataArray.Length
             Dim tempFileName As String = nombre

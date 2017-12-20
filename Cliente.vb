@@ -15,7 +15,6 @@ Public Class Cliente
     Private m_PuertoDelHost As String 'Puerto donde escucha el objeto de la clase Servidor 
     Dim tcpClnt As TcpClient
     Private Usuario As User 'Instancia del Usuario
-    Public cliente As VenCliente
 #End Region
 
 #Region "EVENTOS"

@@ -24,17 +24,18 @@ Partial Class Inscripcion
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inscripcion))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.InscribirPartidoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuPartido = New System.Windows.Forms.ToolStripMenuItem()
         Me.InscripcionDeCandidatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuPresidente = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuAlcalde = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuDiputado = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuVotante = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InscribirPartidoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuPartido = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuPais = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuDepartamento = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuMunicipio = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EstadísticasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,12 +43,44 @@ Partial Class Inscripcion
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InscripcionDeCandidatosToolStripMenuItem, Me.InscribirPartidoToolStripMenuItem, Me.AgregarToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InscripcionDeCandidatosToolStripMenuItem, Me.InscribirPartidoToolStripMenuItem, Me.AgregarToolStripMenuItem, Me.EstadísticasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(835, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1042, 24)
         Me.MenuStrip1.TabIndex = 11
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'InscripcionDeCandidatosToolStripMenuItem
+        '
+        Me.InscripcionDeCandidatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuPresidente, Me.menuAlcalde, Me.menuDiputado, Me.menuVotante})
+        Me.InscripcionDeCandidatosToolStripMenuItem.Image = Global.Proyecto.My.Resources.Resources.business_application_addmale_useradd_insert_add_user_client_2312
+        Me.InscripcionDeCandidatosToolStripMenuItem.Name = "InscripcionDeCandidatosToolStripMenuItem"
+        Me.InscripcionDeCandidatosToolStripMenuItem.Size = New System.Drawing.Size(159, 20)
+        Me.InscripcionDeCandidatosToolStripMenuItem.Text = "Inscripción de Personas"
+        '
+        'menuPresidente
+        '
+        Me.menuPresidente.Name = "menuPresidente"
+        Me.menuPresidente.Size = New System.Drawing.Size(134, 22)
+        Me.menuPresidente.Text = "Presidentes"
+        '
+        'menuAlcalde
+        '
+        Me.menuAlcalde.Name = "menuAlcalde"
+        Me.menuAlcalde.Size = New System.Drawing.Size(134, 22)
+        Me.menuAlcalde.Text = "Alcaldes"
+        '
+        'menuDiputado
+        '
+        Me.menuDiputado.Name = "menuDiputado"
+        Me.menuDiputado.Size = New System.Drawing.Size(134, 22)
+        Me.menuDiputado.Text = "Diputados"
+        '
+        'menuVotante
+        '
+        Me.menuVotante.Name = "menuVotante"
+        Me.menuVotante.Size = New System.Drawing.Size(134, 22)
+        Me.menuVotante.Text = "Votante"
         '
         'InscribirPartidoToolStripMenuItem
         '
@@ -61,38 +94,6 @@ Partial Class Inscripcion
         Me.menuPartido.Name = "menuPartido"
         Me.menuPartido.Size = New System.Drawing.Size(155, 22)
         Me.menuPartido.Text = "Partido Político"
-        '
-        'InscripcionDeCandidatosToolStripMenuItem
-        '
-        Me.InscripcionDeCandidatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuPresidente, Me.menuAlcalde, Me.menuDiputado, Me.menuVotante})
-        Me.InscripcionDeCandidatosToolStripMenuItem.Image = Global.Proyecto.My.Resources.Resources.business_application_addmale_useradd_insert_add_user_client_2312
-        Me.InscripcionDeCandidatosToolStripMenuItem.Name = "InscripcionDeCandidatosToolStripMenuItem"
-        Me.InscripcionDeCandidatosToolStripMenuItem.Size = New System.Drawing.Size(159, 20)
-        Me.InscripcionDeCandidatosToolStripMenuItem.Text = "Inscripción de Personas"
-        '
-        'menuPresidente
-        '
-        Me.menuPresidente.Name = "menuPresidente"
-        Me.menuPresidente.Size = New System.Drawing.Size(152, 22)
-        Me.menuPresidente.Text = "Presidentes"
-        '
-        'menuAlcalde
-        '
-        Me.menuAlcalde.Name = "menuAlcalde"
-        Me.menuAlcalde.Size = New System.Drawing.Size(152, 22)
-        Me.menuAlcalde.Text = "Alcaldes"
-        '
-        'menuDiputado
-        '
-        Me.menuDiputado.Name = "menuDiputado"
-        Me.menuDiputado.Size = New System.Drawing.Size(152, 22)
-        Me.menuDiputado.Text = "Diputados"
-        '
-        'menuVotante
-        '
-        Me.menuVotante.Name = "menuVotante"
-        Me.menuVotante.Size = New System.Drawing.Size(152, 22)
-        Me.menuVotante.Text = "Votante"
         '
         'AgregarToolStripMenuItem
         '
@@ -120,6 +121,12 @@ Partial Class Inscripcion
         Me.menuMunicipio.Size = New System.Drawing.Size(150, 22)
         Me.menuMunicipio.Text = "Municipio"
         '
+        'EstadísticasToolStripMenuItem
+        '
+        Me.EstadísticasToolStripMenuItem.Name = "EstadísticasToolStripMenuItem"
+        Me.EstadísticasToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.EstadísticasToolStripMenuItem.Text = "Estadísticas"
+        '
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.Proyecto.My.Resources.Resources.TSE
@@ -135,7 +142,7 @@ Partial Class Inscripcion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(835, 508)
+        Me.ClientSize = New System.Drawing.Size(1042, 659)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.PictureBox5)
         Me.Cursor = System.Windows.Forms.Cursors.AppStarting
@@ -166,4 +173,5 @@ Partial Class Inscripcion
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents InscribirPartidoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menuPartido As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EstadísticasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

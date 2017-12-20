@@ -17,7 +17,7 @@ C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\bin\Debug\Proyec
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\bin\Debug\Proyecto.pdb
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\bin\Debug\Proyecto.xml
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Bitacora.resources
-C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Chat.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Candidato.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Identidad.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoDepartamento.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoMunicipio.resources
@@ -28,7 +28,11 @@ C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyec
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.NuevoCandidato.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Login.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Resources.resources
-C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.VenCliente.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.PlanillaAlcaldes.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.PlanillaDiputados.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.PlanillaPresidencial.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Resultados.resources
+C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.Votación.resources
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.vbproj.GenerateResource.Cache
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.exe
 C:\Users\javie\Documents\Visual Studio 2013\Projects\AppCliente\obj\Debug\Proyecto.xml
